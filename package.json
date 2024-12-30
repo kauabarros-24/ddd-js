@@ -10,5 +10,9 @@
   "description": "",
   "devDependencies": {
     "git-commit-msg-linter": "^5.0.8"
+  },
+  "dependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2"
   }
 }
