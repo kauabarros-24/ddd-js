@@ -1,0 +1,14 @@
+{
+  "name": "ddd",
+  "version": "1.0.0",
+  "main": "testej.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "git-commit-msg-linter": "^5.0.8"
+  }
+}
