@@ -14,6 +14,8 @@
     "typescript": "^5.7.2"
   },
   "dependencies": {
-    "eslinter": "^3.2.1"
+    "eslinter": "^3.2.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.3.0"
   }
 }
