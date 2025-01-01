@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "testej.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
@@ -14,8 +14,11 @@
     "typescript": "^5.7.2"
   },
   "dependencies": {
+    "@types/jest": "^29.5.14",
     "eslinter": "^3.2.1",
     "husky": "^9.1.7",
-    "lint-staged": "^15.3.0"
+    "jest": "^29.7.0",
+    "lint-staged": "^15.3.0",
+    "ts-jest": "^29.2.5"
   }
 }
