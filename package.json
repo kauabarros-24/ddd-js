@@ -9,11 +9,11 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "git-commit-msg-linter": "^5.0.8"
+    "@types/node": "^22.10.2",
+    "git-commit-msg-linter": "^5.0.8",
+    "typescript": "^5.7.2"
   },
   "dependencies": {
-    "@types/node": "^22.10.2",
-    "eslinter": "^3.2.1",
-    "typescript": "^5.7.2"
+    "eslinter": "^3.2.1"
   }
 }
