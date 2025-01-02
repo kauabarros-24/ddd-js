@@ -1,5 +1,6 @@
-import { exitCode } from "process"
 import { SignupController } from "./signup"
+import { MissingParamError } from "../errors/errors"
+
 
 describe('SignupController', () => {
     test('Should return 400 if no name is provided', () =>  {
@@ -13,7 +14,7 @@ describe('SignupController', () => {
         }
         const http_response = sut.handle(http_request)
         expect(http_response.statusCode).toBe(400)
-        expect(http_response.body).toEqual(new Error('Missing param: name'))
+        expect(http_response.body).toEqual(new MissingParamError('name'))
     })
     test ('Should return 400 if no email is provided', () => {
         const sut = new SignupController()
@@ -26,7 +27,7 @@ describe('SignupController', () => {
         }
         const http_response = sut.handle(http_request)
         expect(http_response.statusCode).toBe(400)
-        expect(http_response.body).toEqual(new Error("Missing param: email"))
+        expect(http_response.body).toEqual(new MissingParamError('email'))
     })
     test ('Should return 400 if no password is provided', () => {
         const sut = new SignupController()
@@ -38,6 +39,6 @@ describe('SignupController', () => {
         }
     const http_response = sut.handle(http_request)
     expect(http_response.statusCode).toBe(400)
-    expect(http_response.body).toEqual(new Error("Missing param: password"))
+    expect(http_response.body).toEqual(new MissingParamError('password'))
     })
 })
