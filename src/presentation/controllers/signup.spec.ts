@@ -8,12 +8,23 @@ interface SubTypes {
     emailValidator: EmailValidator
 }
 
+const makeEmailValidator = (): EmailValidator => {
+    class EmailValidatorStub implements EmailValidator {
+        is_valid(email: string): boolean {
+            return true
+        }
+    }
+    return new EmailValidatorStub()
+}
+
+
+
 const makeSut = (): SubTypes => {
 
     
     class EmailValidatorStub implements EmailValidator{
         is_valid(email: string): boolean {
-            return true   
+            throw new Error()
         }
     }
 
@@ -113,15 +124,13 @@ describe('SignupController', () => {
 
 
     }) 
-    test ('Should return 500 if EmailValidator thorws', () => {
-        class EmailValidatorStub implements EmailValidator {
-            is_valid(email: string): boolean {
-                throw new Error()
-            }
-        }
-        const emailValidatorStub = new EmailValidatorStub()
-        const sut = new SignupController(emailValidatorStub)
-        const http_request = {
+    test ('Should return 500 if EmailValidator throws', () => {
+    
+        const { sut, emailValidator} = makeSut()
+        jest.spyOn(emailValidator, "is_valid").mockImplementationOnce(() => {
+            throw new Error()
+        })
+        const http_request = { 
             body: {
                 name: "any_name",
                 email: "any_email@gmail.com",
@@ -131,6 +140,7 @@ describe('SignupController', () => {
             }
         }
         const http_response = sut.handle(http_request)
+        console.log(http_response.statusCode)
         expect(http_response.statusCode).toBe(500)
         expect(http_response.body).toEqual(new ServerError())
     })

@@ -1,4 +1,3 @@
-import { error } from "console"
 import { HttpResponse } from "../protocols/http"
 import { ServerError } from "../errors/server_param"
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1735930855340" clover="3.2.0">
-  <project timestamp="1735930855340" name="All files">
+<coverage generated="1736018684412" clover="3.2.0">
+  <project timestamp="1736018684412" name="All files">
     <metrics statements="28" coveredstatements="28" conditionals="2" coveredconditionals="2" methods="7" coveredmethods="7" elements="37" coveredelements="37" complexity="0" loc="28" ncloc="28" packages="3" files="6" classes="6"/>
     <package name="controllers">
       <metrics statements="13" coveredstatements="13" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
@@ -52,9 +52,9 @@
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <file name="http-helpers.ts" path="/home/kaua/ddd-js/ddd-js/src/presentation/helpers/http-helpers.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="5" count="6" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="6" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
       </file>
     </package>
   </project>
