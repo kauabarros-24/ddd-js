@@ -98,7 +98,7 @@ describe('SignupController', () => {
                 email: "invalid_email@gmail.com",
                 name: "any_name",
                 password: "any_password",
-                passwordConfirm: "any_passwordConfirm"
+                passwordConfirm: "any_password"
 
             }
         }
@@ -106,6 +106,20 @@ describe('SignupController', () => {
         expect(http_response.statusCode).toBe(400)
         expect(http_response.body).toEqual(new InvalidParamError('email'))
 
+    })
+    test('Should return 400 if passwordConfirm is not valid or fail', () => {
+        const { sut } = makeSut()
+        const http_request = {
+            body: {
+                name: "any_name",
+                email: "any_email@gmail.com",
+                password: "any_password",
+                passwordConfirm: "any_passwordConfirm"
+            }
+        }
+        const http_response = sut.handle(http_request)
+        expect(http_response.statusCode).toBe(400)
+        expect(http_response.body).toEqual(new InvalidParamError('passwordConfirm'))
     })
     test ('Should call EmailValidator with correct email', () => {
         const  { sut, emailValidator} = makeSut()
@@ -115,7 +129,7 @@ describe('SignupController', () => {
                 email: "invalid_email@gmail.com",
                 name: "any_name",
                 password: "any_password",
-                passwordConfirm: "any_passwordConfirm"
+                passwordConfirm: "any_password"
 
             }
         }
