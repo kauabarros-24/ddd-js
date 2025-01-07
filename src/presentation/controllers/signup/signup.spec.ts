@@ -200,5 +200,25 @@ describe("SignupController", () => {
         expect(http_response.statusCode).toBe(500)
         expect(http_response.body).toEqual(new ServerError())
         
+    });
+    describe('Should 201 if addAccount is valid', () => {
+        const { sut } = makeSut()
+        const http_request = {
+            body: {
+                name: "valid_name",
+                email: "valid_email@gmail.com",
+                password: "valid_password",
+                passwordConfirm: "valid_password"
+            }
+        }
+        const http_response = sut.handle(http_request)
+        expect(http_response.statusCode).toBe(201)
+        expect(http_response.body).toEqual({
+            id: "valid_id",
+            name: "valid_name",
+            email: "valid_email@gmail.com",
+            password: "valid_password"
+
+        })
     })
 });
