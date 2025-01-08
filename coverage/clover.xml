@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1736368525290" clover="3.2.0">
-  <project timestamp="1736368525291" name="All files">
-    <metrics statements="39" coveredstatements="39" conditionals="3" coveredconditionals="3" methods="9" coveredmethods="9" elements="51" coveredelements="51" complexity="0" loc="39" ncloc="39" packages="4" files="7" classes="7"/>
+<coverage generated="1736370056065" clover="3.2.0">
+  <project timestamp="1736370056065" name="All files">
+    <metrics statements="43" coveredstatements="43" conditionals="3" coveredconditionals="3" methods="12" coveredmethods="12" elements="58" coveredelements="58" complexity="0" loc="43" ncloc="43" packages="5" files="8" classes="8"/>
+    <package name="data.usecases.db_add_account">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <file name="db_add_account.ts" path="/home/kaua/ddd-js/ddd-js/src/data/usecases/db_add_account/db_add_account.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+      </file>
+    </package>
     <package name="presentation.controllers.signup">
       <metrics statements="20" coveredstatements="20" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
       <file name="signup.ts" path="/home/kaua/ddd-js/ddd-js/src/presentation/controllers/signup/signup.ts">
